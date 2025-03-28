@@ -18,7 +18,6 @@ def heapify(arr, n, i):
     # Change root, if needed 
     if largest != i: 
         arr[i],arr[largest] = arr[largest],arr[i] # swap 
-  
         # Heapify the root. 
         heapify(arr, n, largest) 
   
@@ -35,9 +34,9 @@ def heapSort(arr):
         arr[i], arr[0] = arr[0], arr[i] # swap 
         heapify(arr, i, 0) 
   
-arr = [ 12, 11, 13, 5, 6, 7] 
+arr = [ 12, 8, 11, 13, 5, 6, 7, 10] 
 heapSort(arr) 
 n = len(arr) 
 print ("Sorted array is") 
 for i in range(n): 
-    print ("%d" %arr[i], end =' '),
+    print (arr[i], end =' '),
